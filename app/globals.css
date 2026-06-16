@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background-color: #050505; color: #E5E5E5; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #0A0A0A; } ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; } ::-webkit-scrollbar-thumb:hover { background: #FF1A1A; }
+.hex-bg { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23ffffff' fill-opacity='0.03' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+.glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.08); }
+.glass-red { background: rgba(255, 26, 26, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 26, 26, 0.2); }
+.gradient-text { background: linear-gradient(135deg, #FFFFFF 0%, #FF1A1A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.glow-red { box-shadow: 0 0 40px rgba(255, 26, 26, 0.3); } .glow-red-sm { box-shadow: 0 0 20px rgba(255, 26, 26, 0.2); }
+.red-grid { background-image: linear-gradient(rgba(255, 26, 26, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 26, 26, 0.05) 1px, transparent 1px); background-size: 60px 60px; }
+.circuit-bg { background-image: radial-gradient(circle at 20% 50%, rgba(255, 26, 26, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(255, 26, 26, 0.1) 0%, transparent 50%), radial-gradient(circle at 40% 20%, rgba(255, 26, 26, 0.08) 0%, transparent 40%); }
+.btn-primary { position: relative; overflow: hidden; transition: all 0.3s ease; }
+.btn-primary::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); transition: left 0.5s ease; }
+.btn-primary:hover::before { left: 100%; }
